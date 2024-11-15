@@ -9,7 +9,7 @@ Docker Image for Terravision. Terravision creates Professional Cloud Architectur
 4. Run `terravision` and specify your Terraform source files in the format:
 
 ``` sh
-sudo docker run -v ${PWD}:/app/my-terraform-code --rm linux8a/terravision:v1 draw --source my-terraform-code
+sudo docker run -it -v ${PWD}:/works/my-terraform-code --rm linux8a/terravision:v1 draw --source /works/my-terraform-code
 ```
 5. View help use this command
 
