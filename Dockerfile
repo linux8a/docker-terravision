@@ -22,6 +22,7 @@ COPY --from=builder /app /app
 COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
 RUN chmod +x terravision
 RUN useradd -m terravision
+RUN chown terravision:terravision /app
 USER terravision
 ENTRYPOINT ["./terravision"]
 CMD ["--version"]
